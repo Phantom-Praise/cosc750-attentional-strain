@@ -16,3 +16,6 @@ Timing depends on hardware; compare predictive metrics and selected settings,
 not exact seconds. Holdouts overlap and fold SD is not a confidence interval.
 All 25 baseline and six proposed/reference outer prediction sets matched the
 earlier experiments exactly in the workspace verification.
+
+Start with [baseline_table.md](baseline_table.md), then read the separate
+[calibrated-SVM validation table](proposed_validation_table.md).
