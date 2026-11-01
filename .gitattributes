@@ -1,0 +1,3 @@
+*.svg -whitespace
+third_party_licenses/* -whitespace
+tuning_models.py whitespace=-blank-at-eof

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.DS_Store
+.mplconfig/
+*.log
+results/
+tmp/
+dist/
+*.joblib
+short_form_brain_rot_cognitive_decay.csv
+submission_results*/
+.pytest_cache/

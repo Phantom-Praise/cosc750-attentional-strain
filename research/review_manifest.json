@@ -1,0 +1,103 @@
+{
+  "review_date": "2026-10-26",
+  "repositories": [
+    {
+      "repository": "LeoGrin/tabular-benchmark",
+      "ref": "9d54cf53d9fd3159e367e70a00005f4fcbf2c79d",
+      "files": [
+        {
+          "path": "src/data_transforms.py",
+          "blob_sha": "9ef06415c9a7f578d8503be1dda1b1bc8c952604",
+          "url": "https://github.com/LeoGrin/tabular-benchmark/blob/9d54cf53d9fd3159e367e70a00005f4fcbf2c79d/src/data_transforms.py",
+          "scope": "full file"
+        },
+        {
+          "path": "src/generate_dataset_pipeline.py",
+          "blob_sha": "250c1c6a0a0db7ce09be10490700b64bca9244af",
+          "url": "https://github.com/LeoGrin/tabular-benchmark/blob/9d54cf53d9fd3159e367e70a00005f4fcbf2c79d/src/generate_dataset_pipeline.py",
+          "scope": "full file"
+        },
+        {
+          "path": "src/configs/model_configs/hgbt_config.py",
+          "blob_sha": "c9114e64ea0ff2250f3d906a292a0dc9fad15f7f",
+          "url": "https://github.com/LeoGrin/tabular-benchmark/blob/9d54cf53d9fd3159e367e70a00005f4fcbf2c79d/src/configs/model_configs/hgbt_config.py",
+          "scope": "full file"
+        }
+      ]
+    },
+    {
+      "repository": "fabianp/mord",
+      "ref": "c55c599f009f3855fb0fb89467a7223330db4ab7",
+      "files": [
+        {
+          "path": "mord/threshold_based.py",
+          "blob_sha": "e35008530309123582a73bd3ba1293bc4b9739b1",
+          "url": "https://github.com/fabianp/mord/blob/c55c599f009f3855fb0fb89467a7223330db4ab7/mord/threshold_based.py",
+          "scope": "full file"
+        },
+        {
+          "path": "README.rst",
+          "blob_sha": "4e3a7c53466cae2ed21d49f73fef8eabf5225916",
+          "url": "https://github.com/fabianp/mord/blob/c55c599f009f3855fb0fb89467a7223330db4ab7/README.rst",
+          "scope": "full file"
+        }
+      ]
+    },
+    {
+      "repository": "scikit-learn-contrib/imbalanced-learn",
+      "ref": "8504e95f0160f61d1b617ca66f779646d2ee609e",
+      "files": [
+        {
+          "path": "examples/pipeline/plot_pipeline_classification.py",
+          "blob_sha": "c19a86c1c4236ca2ae2e806b878f6a2e9bd630ac",
+          "url": "https://github.com/scikit-learn-contrib/imbalanced-learn/blob/8504e95f0160f61d1b617ca66f779646d2ee609e/examples/pipeline/plot_pipeline_classification.py",
+          "scope": "full file"
+        },
+        {
+          "path": "examples/ensemble/plot_comparison_ensemble_classifier.py",
+          "blob_sha": "602e477e51e3417dabb32186ba43b1fb35e77495",
+          "url": "https://github.com/scikit-learn-contrib/imbalanced-learn/blob/8504e95f0160f61d1b617ca66f779646d2ee609e/examples/ensemble/plot_comparison_ensemble_classifier.py",
+          "scope": "full file"
+        },
+        {
+          "path": "imblearn/over_sampling/_smote/base.py",
+          "blob_sha": "3e17c58dccb9f55fc5593eb961ba6c68c781cc0b",
+          "url": "https://github.com/scikit-learn-contrib/imbalanced-learn/blob/8504e95f0160f61d1b617ca66f779646d2ee609e/imblearn/over_sampling/_smote/base.py",
+          "scope": "lines 300\u2013380"
+        }
+      ]
+    },
+    {
+      "repository": "scikit-learn/scikit-learn",
+      "ref": "1.7.2",
+      "files": [
+        {
+          "path": "sklearn/model_selection/_classification_threshold.py",
+          "blob_sha": "c68ed38b8819d989d0ec838840b5b5406eec7e57",
+          "url": "https://github.com/scikit-learn/scikit-learn/blob/1.7.2/sklearn/model_selection/_classification_threshold.py",
+          "scope": "lines 650\u2013850"
+        }
+      ]
+    }
+  ],
+  "external_code_executed": false,
+  "models_trained_during_review": false,
+  "exact_dataset_code_identified": false,
+  "search_limit": "Limited web and GitHub searches; not proof that no code exists.",
+  "domain_paper": {
+    "url": "https://arxiv.org/html/2404.16066v1",
+    "code_url": "https://osf.io/rkswe/",
+    "paper_method_reviewed": true,
+    "code_inspected": false,
+    "access_failure": "Web reader inaccessible; OSF API HTTP 401"
+  },
+  "local_evidence": {
+    "path": "../results/tuning/original_svm_oof_predictions.csv",
+    "rows": 7200,
+    "correct": 6300,
+    "incorrect": 900,
+    "adjacent_category_errors": 900,
+    "nonadjacent_errors": 0,
+    "sha256": "ff6a65101977c4632d6d590b6ac2110ca90224c7c89c2882f83d00e31fe86abe"
+  }
+}
