@@ -9,3 +9,6 @@
 
 Start with `config.py`, then follow `main()` in `workflow.py`. The root
 `reproduce.py` is a small entry point to this package.
+
+The baseline definitions are in `config.py`; custom classifiers are in
+`histogram.py` and `proposed.py`. Training and evaluation are in `workflow.py`.
