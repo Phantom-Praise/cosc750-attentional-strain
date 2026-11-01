@@ -64,3 +64,15 @@ archive/           Earlier exploratory work
 
 The main workflow does not require the archive. All results are calculated from
 newly fitted models; recorded tables are provided only for comparison.
+
+## Suggested review order
+
+1. Open [`reference_results/`](reference_results/) for baseline and proposed-method tables.
+2. Read [`strain/config.py`](strain/config.py) for baseline models and hyperparameter grids,
+   [`strain/histogram.py`](strain/histogram.py) for histogram Naive Bayes, and
+   [`strain/proposed.py`](strain/proposed.py) for the calibrated SVM.
+3. Follow [`strain/workflow.py`](strain/workflow.py) for data splitting, training-only
+   tuning, evaluation, and report generation.
+4. Use [`docs/`](docs/) for the method and protocols, [`tests/`](tests/) for verification,
+   and [`tools/`](tools/) to build the code ZIP. The [`archive/`](archive/) is optional
+   background on earlier experiments.
