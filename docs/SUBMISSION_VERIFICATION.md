@@ -22,11 +22,14 @@ executed in this check.
 
 ## Checks
 
-- Workspace: all 30 tests passed.
-- Clean folder: 25 tests passed, five historical-evidence tests skipped because
-  the older experiment directories were intentionally absent. Both new
-  submission-evidence tests ran, including proposed-method test-row exclusion.
-- After source-packaging changes, all seven reproduction/packaging tests passed.
+The focused repository layout was verified again after reorganizing the code.
+The fresh source ZIP contains no archive or optional exploratory dependencies.
+All 31 prediction files and predictive table values matched the original run.
+
+
+- Workspace: all 13 focused tests passed.
+- Clean extracted folder: all 13 tests passed, including generated baseline and
+  proposed-method evidence checks; none were skipped.
 - Generated figures were visually inspected. Tables are also exported as CSV,
   Markdown, and booktabs LaTeX source.
 - Source-package checks exclude the virtual environment, dataset CSV, results
@@ -44,5 +47,5 @@ statistical evidence.
 The hosted repository is private by default; grant the instructor access before
 submitting its link. No collaborators were invited or messaged automatically.
 The source ZIP is a code artifact, not the final paper/slides/recording ZIP.
-The publisher's conflicting dataset license fields are recorded in DATASET.md;
+The publisher's conflicting dataset license fields are recorded in [DATASET.md](DATASET.md);
 the cumulative paper needs that correction when it is updated.

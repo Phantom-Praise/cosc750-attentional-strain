@@ -11,9 +11,9 @@ import pandas as pd
 from sklearn.metrics import f1_score
 from sklearn.model_selection import ParameterGrid
 
-from reproduce import ROOT, DATA_FILE, MODEL_ORDER, baseline_definitions, obtain_data, proposed_candidates
-from run_baselines import FEATURES, LABELS, SEEDS
-from build_submission import build
+from strain.workflow import ROOT, DATA_FILE, MODEL_ORDER, baseline_definitions, obtain_data, proposed_candidates
+from strain.config import FEATURES, LABELS, SEEDS
+from tools.build_submission import build
 
 
 class ReproductionTests(unittest.TestCase):
@@ -42,7 +42,7 @@ class ReproductionTests(unittest.TestCase):
             archive.writestr("../../"+DATA_FILE, "wrong file contents")
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp)/DATA_FILE
-            with patch("reproduce.urllib.request.urlopen", return_value=BytesIO(buffer.getvalue())):
+            with patch("strain.workflow.urllib.request.urlopen", return_value=BytesIO(buffer.getvalue())):
                 with self.assertRaises(ValueError): obtain_data(path, download=True)
             self.assertFalse(path.exists())
 
@@ -52,7 +52,9 @@ class ReproductionTests(unittest.TestCase):
             (root/"reproduce.py").write_text("print('test')\n")
             (root/"README.md").write_text("test\n")
             (root/DATA_FILE).write_text("must not be included")
-            for folder in [".venv", "results", "tmp"]:
+            (root/"strain").mkdir()
+            (root/"strain/config.py").write_text("FEATURES = []\n")
+            for folder in [".venv", "results", "tmp", "archive"]:
                 (root/folder).mkdir(); (root/folder/"unwanted.py").write_text("unwanted")
             first = build(Path(tmp)/"first.zip", root)
             second = build(Path(tmp)/"second.zip", root)
@@ -60,8 +62,9 @@ class ReproductionTests(unittest.TestCase):
             with ZipFile(first) as archive:
                 names = archive.namelist()
                 self.assertIn("cosc750-stage3-code/reproduce.py", names)
+                self.assertIn("cosc750-stage3-code/strain/config.py", names)
                 self.assertIn("cosc750-stage3-code/PACKAGE_MANIFEST.json", names)
-                self.assertFalse(any(DATA_FILE in n or '/.venv/' in n or '/results/' in n or '/tmp/' in n for n in names))
+                self.assertFalse(any(DATA_FILE in n or '/.venv/' in n or '/results/' in n or '/tmp/' in n or '/archive/' in n for n in names))
 
     @unittest.skipUnless((ROOT/"results/submission/baseline_table.csv").exists(), "Submission runner not completed")
     def test_portable_baseline_evidence(self):

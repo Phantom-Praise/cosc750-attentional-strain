@@ -182,15 +182,15 @@ exploratory calibration/decision-rule study on this synthetic benchmark.
 
 ## Implementation and sources
 
-- Code: `../research_models.py`, class CalibratedAcuteSVM.
-- Search, folds, and results: `../run_research_experiments.py` and
-  `../results/research_experiments/`.
-- Frozen search plan: `../RESEARCH_EXPERIMENT_PLAN.md`.
+- Code: `../strain/proposed.py`, class CalibratedAcuteSVM.
+- Search, folds, and results: `../reproduce.py` and
+  `../results/submission/proposed_validation/`.
+- Frozen search plan: `PROPOSED_SEARCH_PROTOCOL.md`.
 - [Cortes and Vapnik (1995)](https://doi.org/10.1007/BF00994018).
 - [Calibration overview](https://scikit-learn.org/1.7/modules/calibration.html).
 - [Exact ensemble behavior](https://scikit-learn.org/1.7/modules/generated/sklearn.calibration.CalibratedClassifierCV.html).
 - [SVC implementation documentation](https://scikit-learn.org/1.7/modules/generated/sklearn.svm.SVC.html).
 
 The solver, calibration, and preprocessing are reused library implementations.
-The orchestration, wrappers, and drafting were generated with Codex and require
-the student's review and AI/reuse disclosure.
+Implementation provenance and course-use details are recorded in the
+[course disclosure](COURSE_DISCLOSURE.md).

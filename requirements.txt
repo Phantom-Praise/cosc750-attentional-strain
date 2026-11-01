@@ -2,11 +2,9 @@ cloudpickle==3.1.2
 contourpy==1.4.0
 cycler==0.12.1
 fonttools==4.67.0
-imbalanced-learn==0.14.0
 joblib==1.6.0
 kiwisolver==1.5.1
 matplotlib==3.10.7
-mord==0.7
 numpy==2.5.4
 packaging==26.3
 pandas==2.2.3

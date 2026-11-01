@@ -1,3 +1,6 @@
 *.svg -whitespace
 third_party_licenses/* -whitespace
 tuning_models.py whitespace=-blank-at-eof
+archive/** linguist-vendored
+archive/tuning_models.py whitespace=-blank-at-eof
+archive/third_party_licenses/* -whitespace
