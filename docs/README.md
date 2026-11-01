@@ -17,3 +17,6 @@ Supporting information:
 
 Earlier experiments are preserved under `archive/`; they are not required for
 the main reproduction command.
+
+For review, pair the proposed-method description with the frozen baseline
+protocol to see how model selection and evaluation are separated.
