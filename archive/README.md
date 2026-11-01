@@ -4,6 +4,9 @@ These files preserve the earlier exploration. Use [the main README](../README.md
 and the root reproduction command for the submission workflow. Historical scripts
 may require old evidence files and the full `archive/requirements.txt`.
 
+For the current models and results, return to [the main code](../strain/)
+and [recorded results](../reference_results/).
+
 ---
 
 # COSC 750: attentional-strain classification
